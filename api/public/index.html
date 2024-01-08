@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="ajax.js"></script>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>Login</title>
+</head>
+
+<body>
+<img src="./icons/FY.tecPLACE.png" alt="" id="logo">
+    <div class="card">
+        <div class="msg">
+            <h2 id="bemvindo">Bem Vindo</h2>
+            <h2 id="novologin">Novo Login</h2>
+            <button type="button" id="criarconta">Criar Conta</button>
+        </div>
+
+        <form action="/login" method="post" id="login-form">
+            <div class="login">
+                <h2 id="facalogin">Faça Login</h2>
+                <input type="text" id="email" placeholder="Digite o seu email">
+                <input type="password" id="senha" placeholder="Digite a sua senha">
+
+                <div class="check">
+                    <label for="check" id="lembrar"><input id="#checkbox" type="checkbox"> Lembrar</label>
+                    <a href="" id="esqueceuasenha">Esqueceu a senha?</a>
+                </div>
+
+                <li id="btn">
+                    <button type="button" id="entrarbtn">Entrar</button>
+                    <p id="ou">ou</p>
+                    <button type="button" id="googlebtn">Google</button>
+                    <button type="button" id="facebookbtn">Facebook</button>
+                </li>
+
+            </div>
+        </form>
+
+        <div class="circle">
+            <i class='bx bx-left-arrow-alt' id="arrow"></i>
+            <i class='bx bx-right-arrow-alt' id="arrow"></i>
+        </div>
+
+    </div>
+
+    <footer>
+
+        <section id="footer-section-1">
+            <div id="footer-marca">Fy tech</div>
+            <div id="footer-ponto"></div>
+            <div id="tec-text">Tecnologias Inovadoras PARA VOCÊ</div>
+            <article id="footer-insta"><i class="fa-brands fa-instagram"></i></article>
+            <article id="footer-face"><i class="fa-brands fa-facebook"></i></article>
+        </section>
+
+        <section id="footer-section-2">
+            <p class="footer-section-titulo">Sobre nós</p>
+            <p class="footer-section-text">Desenvolvemos uma SAAS</p>
+            <p class="footer-section-text">multiplataforma com Marketplace</p>
+            <p class="footer-section-text">para pequenas e médias escolas.</p>
+        </section>
+
+        <section id="footer-section-3">
+            <p class="footer-section-titulo">Início</p>
+
+            <div class="footer-link-left"><a href="#">Serviços</a></div>
+            <div class="footer-link-right"><a href="#">Dúvidas</a></div>
+            <div class="footer-link-left"><a href="#">Produtos</a></div>
+            <div class="footer-link-right"><a href="#">Termos de uso</a></div>
+            <div class="footer-link-left"><a href="#">Parceiros</a></div>
+            <div class="footer-link-right"><a href="#">Política de privacidade</a></div>
+        </section>
+
+        <section id="footer-section-4">
+            <p class="footer-section-titulo">Contato</p>
+            <p class="footer-section-text">contatoweb@fy.tec.br</p>
+            <p class="footer-section-text">(81) 99162-0608</p>
+        </section>
+
+    </footer>
+
+</body>
+
+</html>

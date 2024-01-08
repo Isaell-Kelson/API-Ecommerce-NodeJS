@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"/>
+    <title>Home</title>
+</head>
+
+<header>
+    <table>
+        <tr>
+            <div class="logo">
+                <img src="images/logo.png" alt="">
+            </div>
+            <div class="search-box">
+                <input class="search-text" type="text" name="" placeholder="Buscar produtos e serviços escolares...">
+                <a class="search-btn" href="#">
+                    <i class="fa fa-search"></i>
+                </a>               
+            </div>
+            <div class="sair">
+                <a class="sair-btn" href="index.html">Sair</a>
+            </div>
+            <div class="cart">
+                <a class="cart-btn" href="#"><i class="fa fa-cart-shopping"></i></a>
+            </div>
+        </tr>
+    </table>
+</header>
+
+<body>
+
+    <br>
+    <section>
+        <nav id="links-navegacao">
+            <div id="nav-produtos">
+                <a onclick="redirect('ps_esporte.html')">Produtos e Serviços</a>
+            </div>
+            <div id="nav-parceiros">
+                <a href="#">Parceiros</a>
+            </div>
+            <div id="nav-torne-se">
+                <a href="pacotes_empresa2.html">Torne-se um parceiro</a>
+            </div>
+        </nav>
+    </section>
+    <br><br><br>
+
+    <section>
+        <article id="anuncio">
+            <p>MATERIAL E SERVIÇO ESCOLAR PARA SEUS FILHOS</p>
+            <div id="anuncio-texto">
+                <a href="#">AQUI!</a>
+            </div>
+        </article>
+        
+        <article id="foto-01">
+            <img src="images/foto_01.jpg" alt="">
+        </article>
+    </section>
+    <br><br><br>
+
+    <section>
+        <p id="destaques">Destaques</p>
+        <br><br><br>
+        
+        <div class="container-destaques">
+            <a class="bloco-link" href="ps_transporte.html">
+                <div id="transporte-icon"><i class="fa fa-bus"></i></div>
+                <p>Transporte Escolar</p>
+                <div class="bloco-link-circulo"></div>
+            </a>
+
+            <a class="bloco-link" href="ps_livraria.html">
+                <div id="livraria-icon"><i class="fa-solid fa-book"></i></div>
+                <p>Livraria</p>
+                <div class="bloco-link-circulo"></div>
+            </a>
+
+            <a class="bloco-link" href="#">
+                <div id="artes-icon"><i class="fa-solid fa-brush"></i></div>
+                <p>Cursos Livres</p>
+                <div class="bloco-link-circulo"></div>
+            </a>
+        </div>
+        <br><br><br><br>
+
+        <div class="container-destaques">
+            <a class="bloco-link" href="ps_esporte.html">
+                <div id="esportes-icon"><i class="fa-solid fa-futbol"></i></div>
+                <p>Escolinha de Esportes</p>
+                <div class="bloco-link-circulo"></div>
+            </a>
+
+            <a class="bloco-link" href="#">
+                <div id="cashback-icon"><i class="fa-solid fa-money-check-dollar"></i></div>
+                <p>Cashback</p>
+                <div class="bloco-link-circulo"></div>
+            </a>
+
+            <a class="bloco-link" href="#">
+                <div id="cantina-icon"><i class="fa-solid fa-utensils"></i></div>
+                <p>Alimentação</p>
+                <div class="bloco-link-circulo"></div>
+            </a>
+        </div>
+    </section>
+    
+    <br><br>
+    
+    <section>
+        <div class="nossos-planos">
+            <div id="nossos-planos-text">
+                <p>Conheça Nossos Planos</p>
+            </div>
+
+            <div class="container-planos">
+                <div id="planos">
+                    <p id="planos-text">Fy tech</p>
+                    <div id="planos-ponto"></div>
+                    <p class="planos-place">Place</p>
+                    <p id="free-text">FREE</p>
+                    <article class="planos-janela">
+                        <div class="planos-janela-text">
+                            <i class="fa-solid fa-check"></i>  <p>Melhores preços do mercado</p>
+                            <br><br>
+
+                            <i class="fa-solid fa-check"></i>  <p>Perfil personalizado</p>
+                            <br><br>
+
+                            <i class="fa-solid fa-check"></i>  <p>Descontos de parceiros</p>
+                            <br><br>
+                            
+                            <i class="fa-solid fa-check"></i>  <p>R$1,00 em compra = 1 ponto</p>
+                            
+                            <a id="planos-link-free" href="#">cadastre-se</a>
+                        </div>
+                    </article>
+                </div>
+
+                <div id="planos">
+                    <p id="planos-text">Fy tech</p>
+                    <div id="planos-ponto"></div>
+                    <p class="planos-place">Place</p>
+                    <p id="premium-text">PREMIUM</p>
+                    <article class="planos-janela">
+                        <div class="planos-janela-text">
+                            <i class="fa-solid fa-check"></i>  <p>Vantagens do plano FREE</p>
+                            <br>
+
+                            <p id="premium-text-soma">+</p>
+                            <br><br>
+
+                            <i class="fa-solid fa-check"></i>  <p>R$1,00 em compra = 3 pontos</p>
+                            <br><br>
+
+                            <i class="fa-solid fa-check"></i>  <p>Frete grátis*</p>
+                            <br><br>
+                            
+                            <i class="fa-solid fa-check"></i>  <p>Descontos exclusivos</p>
+                            <br><br>
+
+                            <p id="premium-text-maior">Apenas R$6,90/mês</p>
+                            
+                            <a id="planos-link-premium" href="#">Assine!</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+
+            <section id="footer-section-1">
+                <div class="logo-footer"><img src="images/logo_footer.png" alt=""></div>
+                <article id="footer-insta"><a href="#"><i class="fa-brands fa-instagram"></i></a></article>
+                <article id="footer-face"><a href="#"><i class="fa-brands fa-facebook"></i></a></article>
+            </section>
+
+            <section id="footer-section-2">
+                <p class="footer-section-titulo">Sobre nós</p>
+                <p class="footer-section-text">Desenvolvemos uma SAAS</p>
+                <p class="footer-section-text">multiplataforma com Marketplace</p>
+                <p class="footer-section-text">para pequenas e médias escolas.</p>
+            </section>
+
+            <section id="footer-section-3">
+                <p class="footer-section-titulo">Início</p>
+                
+                <div class="footer-link-left"><a href="ps_transporte.html">Produtos</a></div>
+                <div class="footer-link-right"><a href="#">Termos de uso</a></div>
+                <div class="footer-link-left"><a href="#">Parceiros</a></div>
+                <div class="footer-link-right"><a href="#">Política de privacidade</a></div>
+                <div class="footer-link-left"><a href="#">Dúvidas</a></div>
+
+            </section>
+
+            <section id="footer-section-4">
+                <p class="footer-section-titulo">Contato</p>
+                <p class="footer-section-text">contatoweb@fy.tec.br</p>
+                <p class="footer-section-text">(81) 99162-0608</p>
+            </section>
+
+    </footer>
+    
+    <script src="script.js"></script>
+    
+</body>
+</html>

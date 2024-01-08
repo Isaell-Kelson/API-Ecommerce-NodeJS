@@ -1,0 +1,529 @@
+
+* {margin: 0; padding: 0; font-family: Arial, Helvetica, sans-serif;}
+
+/* ---------------- CABEÇALHO (INÍCIO) ------------- */
+
+header {
+    background-color: #7030a0;
+    width: 100%;
+    height: 70px;
+}
+
+#cabecalho {
+    color: white;
+    padding-top: 2px;
+    padding-left: 30px;
+}
+
+.logoo{
+    position: absolute;
+    margin-left: -151px;
+    margin-top: -16px;
+    transform: scale(0.4);
+}
+
+.marca {
+    font-size: 24px;
+}
+
+#circulo {
+    width: 7px;
+    height: 7px;
+    border-radius: 100%;
+    background-color: #0DCAF0;
+    margin-left: 90px;
+    margin-top: -18px;
+}
+
+#place {
+    color: #0DCAF0;
+    margin-left: 168px;
+    margin-top: -44px;
+}
+
+.search-box {
+    position: absolute;
+    top: 17px;
+    right: 250px;
+    background-color: white;
+    height: 25px;
+    padding: 3px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-text {
+    background: none;
+    border: 0;
+    outline: 0;
+    width: 750px;
+    font-size: 15px;
+    padding: 0;
+    transition: 0.4s;
+    padding-left: 3px;
+}
+
+::-webkit-input-placeholder {
+    font-size: 15px;
+    color: #aeaeae;
+}
+
+.search-btn {
+    color: #0DCAF0;
+    transform: scale(1.2);
+}
+
+.entrar {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: 15px;
+    right: 110px;
+}
+
+.entrar-btn {
+    text-decoration: none;
+    border: 0;
+    width: 90px;
+    font-size: 16px;
+    font-weight: bold;
+    text-shadow: 1px 1px #aeaeae;
+    text-align: center;
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #00b191;
+}
+
+.cart {
+    position: absolute;
+    top: 26.5px;
+    right: 65px;
+    transform: scale(1.5);
+}
+
+.cart-btn {
+    color: #00b191;
+}
+
+.sair{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: 15px;
+    right: 110px;
+}
+
+.sair-btn{
+    text-decoration: none;
+    border: 0;
+    width: 45px;
+    font-size: 16px;
+    font-weight: bold;
+    text-shadow: 1px 1px #aeaeae;
+    text-align: center;
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #00b191;
+}
+
+/* --------------- CABEÇALHO (FIM) ---------------- */
+
+/* --------------- NAVEGAÇÃO (INÍCIO) ------------- */
+
+/* -------- DIV01 -------- */
+
+#conteiner-a{
+
+ background-color: #EEEDED;
+ margin-top: 15px;
+ margin-left:174px;
+ display: inline-block;
+ width: 24%;
+
+ font-family: 'Poppins';
+ font-style: normal;
+ font-weight: 100;
+ font-size: 12px;
+ line-height: 25px;
+ letter-spacing: 0.10em;
+ color: black;
+ border-radius: 1px;
+ }
+ 
+ .dados{
+    padding: 3px;
+    margin-left: 4px;
+    font-size: 14px;
+
+ }
+ .nome{
+    border-radius: 5px;
+    padding: 2px;
+    margin-left: 5px;
+ }
+.cpf{
+    border-radius: 5px;
+    padding: 2px;
+    margin-left: 5px;
+
+}
+.email{
+    border-radius: 5px;
+    padding: 2px;
+    margin-left: 5px;
+
+}
+.Cep{
+    border-radius: 5px;
+    padding: 2px;
+    margin-left: 5px;
+
+}
+.endereço{
+    border-radius: 5px;
+    padding: 2px;
+    margin-left: 5px;
+
+}
+.numero{
+    border-radius: 5px;
+    padding: 2px;
+    margin-left: 5px;
+    width: 70px;
+
+}
+.complemento{
+    border-radius: 5px;
+    padding: 2px;
+    margin-left: 35px;
+    
+}
+
+.bairro{
+    border-radius: 5px;
+    padding: 2px;
+    margin-left: 5px;
+    width: 25%;
+
+}
+
+.cidade{
+    border-radius: 5px;
+    padding: 2px;
+    margin-left: 25px;
+
+}
+
+/* ---------- DIV02 -------------*/ 
+
+#conteiner-b{
+    background-color: #EEEDED;
+    margin-top: 15px;
+    display: inline-block;
+    margin-left: 20px;
+    width: 26%;
+    position:absolute;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 100;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.10em;
+    color: black;
+}
+.pag{
+    padding: 5px;
+    margin-left: 4px;
+    font-size: 14px;
+}
+
+.cartacredito{
+    padding: 2px;
+    margin-left: 5px;
+}
+
+.cartao{
+    border-radius: 7px;
+    padding: 2px;
+    margin-left: 5px;
+}
+.validade{
+    border-radius: 7px;
+    padding: 2px;
+    margin-left: 5px;
+    width: 35px;
+}
+.validad{
+    border-radius: 7px;
+    padding: 2px;
+    margin-left: 5px;
+    width: 35px;
+}
+.codigo{
+    border-radius: 7px;
+    padding: 2px;
+    margin-left: 38px;
+    width: 20%;
+}
+.cod{
+    margin-left: 44px
+}
+.titular{
+    border-radius: 7px;
+    padding: 2px;
+    margin-left: 5px;
+}
+.parcelas{
+    border-radius: 7px;
+    padding: 2px;
+    margin-left: 5px;
+}
+
+/* ---------- DIV03 --------- */
+
+#conteiner-c{
+    background-color: #a157da;
+    display: inline-block;
+    margin-left: 426px;
+    position: absolute;
+    margin-top: 16px;
+    width: 219px;
+    padding: 7px;
+    left: 35%;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 100;
+    font-size: 14px;
+    line-height: 15px;
+    letter-spacing: 0.10em;
+    color: black;
+  
+}
+
+/* ------------- DIV04 ----------- */
+
+.conteiner-d{
+    display: inline-block;
+
+    margin-top: 15px;
+    margin-left: 396px;
+    width: 310px;
+
+    position:absolute;
+}
+
+/* Estilo da tabela de carrinho de compras */
+
+.conteiner-d table {
+    background-color: #EEEDED;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.conteiner-d th,
+.conteiner-d td {
+    padding: 8px;
+    text-align: left;
+}
+
+.conteiner-d th {
+    background-color: #f2f2f2;
+    font-size:15px
+}
+
+.conteiner-d td:first-child {
+    width: 70%;
+}
+
+.conteiner-d td:last-child {
+    text-align: right;
+}
+
+.produto {
+    margin-top: 15px;
+    font-size: 13px;
+    margin-left: 7px;
+}
+
+.qtd {
+    margin-left: 35px;
+    position:absolute;
+}
+
+
+/* ---------- DIV05 ------------*/
+
+#conteiner-e{
+    background-color: #a157da;
+    margin-top: 75px;
+    display: inline-block;
+    margin-left: 396px;
+    width: 205px;
+    position:absolute;
+    padding: 14px;
+
+}
+
+.camisa{
+    margin-top: 0px;
+    font-size: 12px;
+    margin-left: -5px;
+}
+
+/* ---------- DIV06 --------- */
+
+#conteiner-f{
+    margin-top: 112px;
+    display: inline-block;
+    margin-left: 396px;
+    position:absolute;
+    width: 213px;
+    padding: 10px;
+}
+
+.subtotal {
+    margin-top: 0px;
+    font-size: 12px;
+    margin-left: -2px;
+}
+
+/* --------- DIV07 ---------*/
+
+#seu-carrinho {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #a157da;
+    height: 30px;
+
+    font-weight: bold;
+}
+
+#valor-total {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #a157da;
+    height: 30px;
+
+    font-weight: bold;
+}
+
+
+.botao{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #02B513 ;
+    border: #02B513;
+    font-size: 17px;
+    color: white;
+    border-radius: 5px;
+    width: 310px;
+    padding: 7px;
+
+    margin-top: 20px;
+}
+/* --------------- NAVEGAÇÃO (FIM) ------------- */
+
+/* ------------ RODAPÉ (INÍCIO) ------------- */
+
+footer {
+    display: flex;
+    align-items: center;
+
+    background-color: #afafaf;
+    color: white;
+
+    height: 150px;
+    width: 100%;
+
+    left: 0;
+    bottom: 0;
+    
+}
+
+#footer-section-1 {
+    margin-left: 50px;
+}
+
+#rodapeLogo {
+    transform: scale(0.6);
+    margin-left: -30px;
+}
+
+footer i {
+    color: #424242;
+    transform: scale(1.5);
+}
+
+#footer-insta {
+    margin-top: -20px;
+    margin-left: 30px;
+}
+
+#footer-face {
+    position: absolute;
+    margin-top: -26px;
+    margin-left: 55px;
+}
+
+#footer-section-2 {
+    padding-top: 5px;
+    margin-left: 50px;
+ 
+}
+
+.footer-section-titulo {
+    font-size: 16px;
+    font-weight: bold;
+    padding-bottom: 8px;
+}
+
+.footer-section-text {
+    position: relative;
+    font-size: 14px;
+   
+    bottom: 10px;
+}
+
+#footer-section-3 {
+   
+    margin-left: 45px;
+}
+
+#footer-section-3 a {
+    color: white;
+    font-size: 12px;
+}
+
+.footer-link-left {
+    position: relative;
+    padding-top: 3px;
+   
+    bottom: 16px;
+}
+
+.footer-link-right {
+    position: absolute;
+  
+    margin-left: 10px;
+}
+
+#footer-section-4 {
+   
+    margin-left: 150px;
+}
+
+#footer-section-4 p {
+    padding-top: 5px;
+}

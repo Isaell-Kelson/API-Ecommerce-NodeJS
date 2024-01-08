@@ -1,0 +1,6 @@
+FLUXO TELA DO CARRINHO
+
+QNTD --> só altera a quantidade do produto (permanece na mesma página)
+X --> exclui o item da tela de carrinho (não consegui colocar a função no JS para o botão)
+BOTÃO CONTINUAR COMPRA --> Volta para a tela de listagem de fornecedores
+BOTÃO FINALIZAR COMPRA --> vai para a tela de pagamento do carrinho

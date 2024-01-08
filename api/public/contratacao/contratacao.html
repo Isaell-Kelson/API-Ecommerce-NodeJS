@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="styleContratacao.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <nav>
+            <img onclick="redirect()" id="logo" src="./imagem/logo.png" alt="">
+            <input id="pesquisa" type="text" placeholder="Buscar produtos e serviços escolares...">
+            <button type="button" id="perfil"><i id="user" class='bx bxs-user'></i></button>
+            <button type="button" id="carrinho"><i id="user" class='bx bx-cart'></i></button>
+        </nav>
+    </div>
+
+    <div class="container-perfil">
+        <div class="perfil-imagem">
+            <img id="imagem" src="./imagem/sem-foto.png" alt="">
+            <p id="nome-usuario">Transporte&nbspTia&nbspAna</p>
+        </div>
+
+        <div class="stars">
+            <ul class="avaliacao">
+                <li class="star-icon ativo" data-avaliacao="1"></li>
+                <li class="star-icon" data-avaliacao="2"></li>
+                <li class="star-icon" data-avaliacao="3"></li>
+                <li class="star-icon" data-avaliacao="4"></li>
+                <li class="star-icon" data-avaliacao="5"></li>
+            </ul>
+        </div>
+
+        <div class="servicos">
+            <button type="button" id="chat" class="btn-servicos"><i class='bx bx-chat'></i></button>
+            <label for="chat">Chat</label>
+
+            <button type="button" id="contratar" class="btn-servicos"><i class='bx bx-money'></i></button>
+            <label for="contratar">Contratar</label>
+
+            <button type="button" id="avaliar" class="btn-servicos"><i class='bx bxs-calendar-star'></i></button>
+            <label for="avaliar">Avaliar</label>
+
+            <button type="button" id="compartilhar" class="btn-servicos"><i class='bx bxs-share'></i></button>
+            <label for="compartilhar">Compartilhar</label>
+        </div>
+    </div>
+
+    <div class="containerGaleria">
+        <div class="galeria">
+            <img class="item" src="./imagem/Transporte-Escolar-Segurança.jpg" alt="">
+            <img id="img" class="item-2" src="./imagem/volta-as-aulas-1024x536.jpg" alt="">
+            <img id="img" class="item-3" src="./imagem/sp-4.jpg" alt="">
+            <img id="img" class="item-4" src="./imagem/depositphotos_208878630-stock-photo-handsome-senior-school-bus-driver.jpg" alt="">
+        </div>
+    </div>
+
+    <!--<div class="container-galeria">
+        <button class="arrow-left" aria-label="previous image"></button>
+        <button class="arrow-right" aria-label="next image"></button>
+
+        <div class="galeria-wrapper">
+            <div class="galeria">
+                <img id="img" class="item current-item" src="/public/imagem/Transporte-Escolar-Segurança.jpg"
+                    alt="">
+                <img id="img" class="item current-item" src="/public/imagem/volta-as-aulas-1024x536.jpg" alt="">
+                <img id="img" class="item current-item" src="/public/imagem/sp-4.jpg" alt="">
+                <img id="img" class="item current-item"
+                    src="/public/imagem/depositphotos_208878630-stock-photo-handsome-senior-school-bus-driver.jpg"
+                    alt="">
+            </div>
+        </div>
+    </div>
+    -->
+
+    <section action="" method="post" class="cards">
+
+        <textarea id="texto" readonly style="resize: none;" class="fixed-size" name="" id="" cols="30" rows="10"></textarea>
+
+        <div class="card-comments">
+
+            <div class="comments-1">
+                asd
+            </div>
+
+            <div class="comments-2">
+                asd
+            </div>
+
+            <div class="comments-2">
+                asd
+            </div>
+
+        </div>
+
+    </section>
+    <footer>
+
+        <section id="footer-section-1">
+            <img id="rodapeLogo" src="./imagem/logo_footer.png" alt="">
+            <article id="footer-insta"><i class="fa-brands fa-instagram"></i></article>
+            <article id="footer-face"><i class="fa-brands fa-facebook"></i></article>
+        </section>
+
+        <section id="footer-section-2">
+            <p class="footer-section-titulo">Sobre nós</p>
+            <p class="footer-section-text">Desenvolvemos uma SAAS</p>
+            <p class="footer-section-text">multiplataforma com Marketplace</p>
+            <p class="footer-section-text">para pequenas e médias escolas.</p>
+        </section>
+
+        <section id="footer-section-3">
+            <p class="footer-section-titulo">Início</p>
+
+            <div class="footer-link-left"><a href="#">Serviços</a></div>
+            <div class="footer-link-right"><a href="#">Dúvidas</a></div>
+            <div class="footer-link-left"><a href="#">Produtos</a></div>
+            <div class="footer-link-right"><a href="#">Termos de uso</a></div>
+            <div class="footer-link-left"><a href="#">Parceiros</a></div>
+            <div class="footer-link-right"><a href="#">Política de privacidade</a></div>
+        </section>
+
+        <section id="footer-section-4">
+            <p class="footer-section-titulo">Contato</p>
+            <p class="footer-section-text">contatoweb@fy.tec.br</p>
+            <p class="footer-section-text">(81) 99162-0608</p>
+        </section>
+
+    </footer>
+</body>
+
+<script>
+    var stars = document.querySelectorAll('.star-icon');
+
+    document.addEventListener('click', function (e) {
+        var classStar = e.target.classList;
+        if (!classStar.contains('ativo')) {
+            stars.forEach(function (star) {
+                star.classList.remove('ativo');
+            });
+            classStar.add('ativo');
+            console.log(e.target.getAttribute('data-avaliacao'))
+        };
+    });
+
+    function redirect() {
+        window.location = "/public/telainicial/home.html"
+    }
+
+    var text = document.getElementById('texto')
+
+    text.innerHTML = "Descrição do serviço: Transporte escolar para alunos do ensino fundamental e médio."
+</script>
+
+</html>

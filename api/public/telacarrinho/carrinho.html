@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+    <title>Carrinho de compras</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />    
+</head>
+<body onload="pegarCarrinho('esportes'); pegarCarrinho('transporte')">
+
+    <div class="container">
+        <nav>
+            <img onclick="redirect()" id="logo" src="./logo/FY.tecPLACE.png" alt="">
+            <input id="pesquisa" type="text" placeholder="Buscar produtos e serviços escolares...">
+            <button type="button" id="perfil"><i id="user" class='bx bxs-user'></i></button>
+            <button type="button" id="carrinho"><i id="user" class='bx bx-cart'></i></button>
+        </nav>
+    </div>
+
+    <main>
+        <section>
+        <section>
+            <div class="carrinho-compras">
+                <h1><i class="material-symbols-outlined" id="icone-carrinho">shopping_cart
+                </i>Carrinho de compras</h1>
+            </div>
+        </section>
+                <section>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Descrição</th> 
+                                <th>Quantidade</th>
+                                <th>Preço</th>
+                                <th>Subtotal</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabela">
+                            <tr>
+                                <td>
+                                <div class="produtos-1">
+                                <img id="onibus" src="transporte_escolar.jpg" alt="Transporte Escolar">
+                                    <div class="info">
+                                        <div class="name">Transporte Escolar</div>
+                                        <div class="categoria">Tia Maria Transporte escolar</div>
+                                    </div>
+                                </div>
+                            </td>
+                        <td>
+                            <div class="qty">
+                                <button onclick="qntDiminuir()"><i class="material-symbols-outlined">expand_more</i></button>
+                                <span class id="produto1">1</span>
+                                <button onclick="qntAumentar()"><i class="material-symbols-outlined">expand_less</i></button>
+                        </td>
+                        <td id="valor1">R$ 100,00</td>
+                        <td id="valor2">R$ 100,00</td>
+                        <td>
+                            <button><i class="material-symbols-outlined" id="delete1">cancel</i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        <div class="produtos-1">
+                        <img id="livro" src="livros.png" alt="Livro Escolar">
+                            <div class="info">
+                                <div class="name">Livro Jardim Escola Divertida</div>
+                                <div class="categoria">Livro Jardim Escola Divertida</div>
+                            </div>
+                        </div>
+                    </td>
+                <td>
+                    <div class="qty">
+                        <button onclick="qntDiminuir1()"><i class="material-symbols-outlined">expand_more</i></button>
+                        <span class id="produto2">1</span>
+                        <button onclick="qntAumentar1()"><i class="material-symbols-outlined">expand_less</i></button>
+                </td>
+                <td id="valor3">R$ 60,00</td>
+                <td id="valor4">R$ 60,00</td>
+                <td>
+                    <button><i class="material-symbols-outlined" id="delete1">cancel</i></button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                <div class="carrinho-subtotal"></div>    
+                        <td id="valor5">Subtotal</td>
+                        <td id="valor6">R$ 160,00</td>
+                    
+            </td>
+            </tr>
+                    </tbody>
+                </table>
+            </section>
+            <div class="">
+                <div class="botoes_continuar_finalizar">
+                    <a href="#" target="_blank" id="continuar">
+                        Continuar compra
+                    </a>
+                    <a href="telapagamento.html" target="_blank" id="finalizar" onclick="enviarCarrinhoParaPagamento()">
+                        Finalizar compra
+                    </a>
+                </div>
+
+            </main>
+
+                <footer>
+                    <section id="footer-section-1">
+                        <div class="logo-footer"><img src="logo_footer.png" alt=""></div>
+                        <article id="footer-insta"><a href="#"><i class="fa-brands fa-instagram"></i></a></article>
+                        <article id="footer-face"><a href="#"><i class="fa-brands fa-facebook"></i></a></article>
+                    </section>
+        
+                    <section id="footer-section-2">
+                        <p class="footer-section-titulo">Sobre nós</p>
+                        <p class="footer-section-text">Desenvolvemos uma SAAS</p>
+                        <p class="footer-section-text">multiplataforma com Marketplace</p>
+                        <p class="footer-section-text">para pequenas e médias escolas.</p>
+                    </section>
+        
+                    <section id="footer-section-3">
+                        <p class="footer-section-titulo">Início</p>
+                        
+                        <div class="footer-link-left"><a href="ps_transporte.html">Produtos</a></div>
+                        <div class="footer-link-right"><a href="#">Termos de uso</a></div>
+                        <div class="footer-link-left"><a href="#">Parceiros</a></div>
+                        <div class="footer-link-right"><a href="#">Política de privacidade</a></div>
+                        <div class="footer-link-left"><a href="#">Dúvidas</a></div>
+        
+                    </section>
+        
+                    <section id="footer-section-4">
+                        <p class="footer-section-titulo">Contato</p>
+                        <p class="footer-section-text">contatoweb@fy.tec.br</p>
+                        <p class="footer-section-text">(81) 99162-0608</p>
+                    </section>
+        
+            </footer> 
+       <script src="script.js"></script>
+    </body>
+</html>  

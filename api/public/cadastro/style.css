@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700&family=Roboto:wght@100;300;400;500;700;900&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #F9F9F9;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow: hidden;
+
+    font-family: 'Poppins', sans-serif;
+}
+
+.card {
+    background: linear-gradient(90deg, #65E4A3 31%, #7030a0 0%);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: 800px;
+    height: 500px;
+    position: absolute;
+
+    margin-bottom: 40px;
+    border-radius: 20px;
+}
+
+.left-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 250px;
+    height: 0px;
+    width: 0px;
+    color: white;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    line-height: 60px;
+
+    letter-spacing: 0.1em;
+}
+
+#seja {
+    margin-left: 80px;
+}
+
+#nosso {
+    margin-left: 70px;
+}
+
+#parceiro {
+    margin-left: 50px;
+}
+
+.rigth-card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    margin-bottom: -400px;
+}
+
+#cadastro {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 0px;
+
+    margin-top: -200px;
+    margin-bottom: 40px;
+    margin-left: -40px;
+    color: white;
+    position: relative;
+
+    letter-spacing: 0.15em;
+}
+
+#cadastro::after {
+    content: "";
+
+    width: 50%;
+    height: 1px;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    top: 20px;
+    left: 0;
+}
+
+.label-float-left {
+    margin-left: -20px;
+}
+
+.label-float-rigth {
+    position: relative;
+    left: 260px;
+    top: -365px;
+}
+
+label {
+    font-weight: 200;
+    color: white;
+}
+
+label::after {
+    content: "*";
+    color: red;
+}
+
+#labelFantasia::after {
+    content: "";
+}
+
+#labelTel::after {
+    content: "";
+}
+
+#labelCNPJ::after {
+    content: "";
+}
+
+input {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 12px;
+
+    padding: 5px 25px;
+    border-radius: 8px;
+    border: 0;
+    outline: none;
+    transition: all 0.70s;
+}
+
+input:focus {
+    box-shadow: rgb(183, 0, 255) 0px 3px 20px 0px;
+}
+
+.continuarBtn {
+    position: absolute;
+
+    margin-top: 205px;
+    margin-left: 250px;
+}
+
+#continuarBtn {
+
+    border-radius: 15px;
+    border: 0;
+    padding: 5px 70px;
+
+    background-color: #65E4A3;
+    color: white;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.15em;
+    font-weight: 500;
+
+    cursor: pointer;
+}
+
+footer {
+    background-color: #afafaf;
+    color: white;
+    height: 90px;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+}
+
+#footer-section-1 {
+    margin-left: 50px;
+}
+
+#rodapeLogo {
+    transform: scale(0.6);
+    margin-left: -30px;
+}
+
+footer i {
+    color: #424242;
+    transform: scale(1.5);
+}
+
+#footer-insta {
+    margin-top: -20px;
+    margin-left: 30px;
+}
+
+#footer-face {
+    position: absolute;
+    margin-top: -26px;
+    margin-left: 55px;
+}
+
+#footer-section-2 {
+    margin-top: -90px;
+    margin-left: 350px;
+}
+
+.footer-section-titulo {
+    font-size: 16px;
+    font-weight: bold;
+    padding-bottom: 8px;
+}
+
+.footer-section-text {
+    position: relative;
+    font-size: 14px;
+    padding-top: 1px;
+    bottom: 10px;
+}
+
+#footer-section-3 {
+    margin-top: -100px;
+    margin-left: 745px;
+}
+
+#footer-section-3 a {
+    color: white;
+    font-size: 12px;
+}
+
+.footer-link-left {
+    position: relative;
+    padding-top: 3px;
+    margin-top: -3px;
+    bottom: 16px;
+}
+
+.footer-link-right {
+    position: absolute;
+    margin-top: -41px;
+    margin-left: 110px;
+}
+
+#footer-section-4 {
+    margin-top: -112px;
+    margin-left: 1150px;
+}
+
+#footer-section-4 p {
+    padding-top: 5px;
+}
+
+#logo {
+    transform: scale(0.3);
+    position: relative;
+    margin-left: -200px;
+}
+
+.logo {
+    background-color: #7030a0;
+    width: 100%;
+    height: 60px;
+    position: relative;
+    bottom: 310px;
+
+    display: flex;
+    align-items: center;
+}

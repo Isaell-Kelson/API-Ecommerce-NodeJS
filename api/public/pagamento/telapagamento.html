@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="telapaga.css">
+    <script src="/public/telainicial/script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"/>
+    <title>Pagamento</title>
+</head>
+
+    <script>
+        function exibirItensCarrinho() {
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "/produtos");
+            xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+            xhr.onreadystatechange = function() {
+              if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+                var carrinho = JSON.parse(xhr.responseText).produtos;
+                var produtosLocalStorage = JSON.parse(localStorage.getItem("produtos")) || [];
+          
+                carrinho = carrinho.filter(function(produto) {
+                  var produtoLocalStorage = produtosLocalStorage.find(function(item) {
+                    return item.id_produto === produto.id_produto;
+                  });
+          
+                  if (produtoLocalStorage) {
+                    produto.quantidade = produtoLocalStorage.quantidade;
+                    return true;
+                  }
+          
+                  return false;
+                });
+          
+                var tabelaCorpo = document.getElementById("tabela-corpo");
+                tabelaCorpo.innerHTML = ""; // Limpa o conteúdo existente do tbody
+                var subtotal = 0;
+          
+                carrinho.forEach(function(produto) {
+                  var linha = document.createElement("tr");
+                  
+                  var colunaProduto = document.createElement("td");
+                  var nomeProduto = document.createElement("span"); // Correção: usar <span> em vez de <div>
+                  nomeProduto.textContent = produto.nome;
+                  colunaProduto.appendChild(nomeProduto); // Correção: adicionar <span> ao <td>
+                  linha.appendChild(colunaProduto);
+                  
+                  var colunaQuantidade = document.createElement("td");
+                  colunaQuantidade.textContent = produto.quantidade;
+                  colunaQuantidade.classList.add("qtd");
+                  linha.appendChild(colunaQuantidade);
+                  
+                  var colunaPreco = document.createElement("td");
+                  colunaPreco.textContent = "R$" + produto.preco.toFixed(2);
+                  linha.appendChild(colunaPreco);
+                  
+                  var subtotalProduto = produto.quantidade * produto.preco;
+                  subtotal += subtotalProduto;
+                  var colunaSubtotal = document.createElement("td");
+                  colunaSubtotal.textContent = "R$" + subtotalProduto.toFixed(2);
+                  linha.appendChild(colunaSubtotal);
+          
+                  tabelaCorpo.appendChild(linha); // Adiciona a linha ao tbody da tabela
+                });
+
+                var linhaSubtotal = document.createElement("tr");
+                
+                var colunaVazia = document.createElement("td");
+                colunaVazia.colSpan = "3";
+                linhaSubtotal.appendChild(colunaVazia);
+           
+                var colunaSubtotalFinal = document.getElementById("valor-total");
+                colunaSubtotalFinal.textContent = "Total R$ " + subtotal.toFixed(2);
+            
+                tabelaCorpo.appendChild(linhaSubtotal); // Adiciona a linha do subtotal ao tbody da tabela
+               
+              }
+              
+            };
+            xhr.send();
+          }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            exibirItensCarrinho();
+          });
+    </script>
+
+
+<header>
+    <table>
+        <tr>
+            <div class="logo">
+                <img src="logo.png" alt="" class="logoo">
+            </div>
+            <div class="search-box">
+                <input class="search-text" type="text" name="" placeholder="Buscar produtos e serviços escolares...">
+                <a class="search-btn" href="#">
+                    <i class="fa fa-search"></i>
+                </a>               
+            </div>
+            <div class="sair">
+                <a class="sair-btn" href="index.html">Sair</a>
+            </div>
+            <div class="cart">
+                <a class="cart-btn" href="#"><i class="fa fa-cart-shopping"></i></a>
+            </div>
+        </tr>
+    </table>
+</header>
+
+<body>
+    <div>
+        <div id="conteiner-a">
+            <form>
+                <h4 class="dados">Meus dados</h4>
+                <label class="nome">Nome completo</label>
+                <br>
+                <input type="text" class="nome">
+                <br>
+                <label class="cpf">CPF</label>
+                <br>
+                <input type="text" class="cpf" id="cpf" data-inputmask="'mask': '999.999.999-99'">
+                <br>
+                <label class="email">E-mail</label>
+                <br>
+                <input type="text" class="email">
+                <br>
+                <label class="Cep">Cep</label>
+                <br>
+                <input type="text" class="Cep">
+                <br>
+                <label class="endereço">Endereço</label>
+                <br>
+                <input type="text" class="endereço">
+                <br>
+                <label class="numero">Número</label>
+                <label class="compl">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Complemento</label>
+                <br>
+                <input type="number" class="numero">
+                <input type="text" class="complemento">
+                <br>
+                <label class="bairro">Bairro</label>
+                <label>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+                    &ensp;&ensp;&ensp;Cidade</label>
+                <br>
+                <input type="text" class="bairro">
+                <input type="cidade" class="cidade">
+                <br><br>
+            </form>
+        </div>
+
+        <!--DIV02-->
+
+        <div id="conteiner-b">
+            <form>
+                <h4 class="pag">Forma de pagamento</h4>
+                <br>
+                <label>
+                    <input type="radio" name="metodoPagamento" value="cartaoCredito" checked>
+                    Cartão de Crédito
+                </label>
+                <br>
+                <label>
+                    <input type="radio" name="metodoPagamento" value="boleto">
+                    Boleto
+                </label>
+                <br>
+                <label>
+                    <input type="radio" name="metodoPagamento" value="pix">
+                    Pix
+                </label>
+                <br><br>
+                <label for="numeroCartao" class="cartao">Número do cartão</label>
+                <br>
+                <input type="text" id="numeroCartao" name="numeroCartao">
+                <br><br>
+                <input type="submit" value="Enviar">
+                <br><br>
+                <label class="validade">Data de validade</label>
+                <label class="cod">&ensp;&ensp;Cód. de seg.</label>
+                <br>
+                <input type="number" class="validade" placeholder="mm">
+                /<input type="number" class="validade" placeholder="aa">
+                <input type="number" class="codigo" placeholder="">
+                <br><br>
+                <label class="titular">Nome do titular</label>
+                <br>
+                <input type="text" class="titular">
+                <br><br>
+                <label class="parcelas">Número de parcelas</label>
+                <br>
+                <input type="number" class="parcelas">
+                <br><br>
+            </form>
+        </div>
+
+    
+          <div class="conteiner-d">
+            <h4 id="seu-carrinho">Seu carrinho de compras</h4>
+            <table id="tabela">
+              <thead>
+                <tr>
+                  <th class="produto">Produto</th>
+                  <th class="quantidade">Quantidade</th>
+                  <th class="preco">Preço</th>
+                  <th class="subtotal">Subtotal</th>
+                </tr>
+              </thead>
+              <tbody id="tabela-corpo">
+               
+                <!-- Linhas da tabela serão preenchidas dinamicamente -->
+              </tbody>
+              
+            </table>
+            <p id="valor-total"></p>
+            <button class="botao">
+                <a style="color: white; text-decoration: none;" class="botaoconfirma" href="telaconfirmacao.html">Concluir Pagamento</a>
+            </button>
+          </div>
+          
+          <div id="conteiner-f">
+            <h5 class="subtotal"></h5>
+          </div>
+                
+    </div>
+
+    
+    <footer>
+
+        <section id="footer-section-1">
+            <img id="rodapeLogo" src="fim.png" alt="">
+            <article id="footer-insta"><i class="fa-brands fa-instagram"></i></article>
+            <article id="footer-face"><i class="fa-brands fa-facebook"></i></article>
+        </section>
+
+        <section id="footer-section-2">
+            <p class="footer-section-titulo">Sobre nós</p>
+            <p class="footer-section-text">Desenvolvemos uma SAAS</p>
+            <p class="footer-section-text">multiplataforma com Marketplace</p>
+            <p class="footer-section-text">para pequenas e médias escolas.</p>
+        </section>
+
+        <section id="footer-section-3">
+            <p class="footer-section-titulo">Início</p>
+
+            <div class="footer-link-left"><a href="#">Serviços</a></div>
+            <div class="footer-link-right"><a href="#">Dúvidas</a></div>
+            <div class="footer-link-left"><a href="#">Produtos</a></div>
+            <div class="footer-link-right"><a href="#">Termos de uso</a></div>
+            <div class="footer-link-left"><a href="#">Parceiros</a></div>
+            <div class="footer-link-right"><a href="#">Política de privacidade</a></div>
+        </section>
+
+        <section id="footer-section-4">
+            <p class="footer-section-titulo">Contato</p>
+            <p class="footer-section-text">contatoweb@fy.tec.br</p>
+            <p class="footer-section-text">(81) 99162-0608</p>
+        </section>
+
+    </footer>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.6/jquery.inputmask.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#cpf').mask('999.999.999-99');
+            $('#numeroCartao').mask('0000 0000 0000 0000');
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    
+        
+         
+    
+
+</body>
+</html>  
