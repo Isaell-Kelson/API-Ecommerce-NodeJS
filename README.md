@@ -1,6 +1,6 @@
-## E-commerce REST API
+## E-commerce Full Stack
 
-Este é um projeto de uma API REST para um sistema de e-commerce. Ele fornece endpoints para gerenciar produtos, usuários e pedidos.
+Este é um projeto fullstack de um sistema de e-commerce.
 
 ## Tecnologias Utilizadas
 
