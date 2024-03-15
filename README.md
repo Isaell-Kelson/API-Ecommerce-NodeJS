@@ -1,6 +1,15 @@
-E-commerce REST API
+## E-commerce REST API
 
 Este é um projeto de uma API REST para um sistema de e-commerce. Ele fornece endpoints para gerenciar produtos, usuários e pedidos.
+
+## Tecnologias Utilizadas
+
+- **Javascript
+- **Nodejs
+- **MySQL
+- **Postman
+- **HTML
+- **CSS
 
 ## Endpoints
 
@@ -21,14 +30,7 @@ Este é um projeto de uma API REST para um sistema de e-commerce. Ele fornece en
 Certifique-se de incluir o token de acesso nos cabeçalhos das solicitações que exigem autenticação, no formato:
 Authorization: Bearer <token>
 
-Dependências
-bcrypt: ^5.1.0
-body-parser: ^1.20.2
-express: ^4.18.2
-jsonwebtoken: ^9.0.0
-morgan: ^1.10.0
-multer: ^1.4.5-lts.1
-mysql: ^2.18.1
+## Dependências
 
 - **bcrypt: ^5.1.0**  
   - **Descrição:** bcrypt é uma biblioteca para hashing de senhas. Ela é usada para criptografar senhas antes de armazená-las em um banco de dados, aumentando a segurança.  
