@@ -2,19 +2,20 @@ E-commerce REST API
 
 Este é um projeto de uma API REST para um sistema de e-commerce. Ele fornece endpoints para gerenciar produtos, usuários e pedidos.
 
-Endpoints
-POST /api/auth/register: Registra um novo usuário.
-POST /api/auth/login: Autentica um usuário e retorna um token de acesso.
-GET /api/products: Retorna todos os produtos disponíveis.
-GET /api/products/:id: Retorna um produto específico pelo ID.
-POST /api/products: Adiciona um novo produto.
-PUT /api/products/:id: Atualiza um produto existente.
-DELETE /api/products/:id: Remove um produto existente.
-GET /api/orders: Retorna todos os pedidos.
-GET /api/orders/:id: Retorna um pedido específico pelo ID.
-POST /api/orders: Cria um novo pedido.
-PUT /api/orders/:id: Atualiza um pedido existente.
-DELETE /api/orders/:id: Remove um pedido existente.
+## Endpoints
+
+- **POST /api/auth/register**: Registra um novo usuário.
+- **POST /api/auth/login**: Autentica um usuário e retorna um token de acesso.
+- **GET /api/products**: Retorna todos os produtos disponíveis.
+- **GET /api/products/:id**: Retorna um produto específico pelo ID.
+- **POST /api/products**: Adiciona um novo produto.
+- **PUT /api/products/:id**: Atualiza um produto existente.
+- **DELETE /api/products/:id**: Remove um produto existente.
+- **GET /api/orders**: Retorna todos os pedidos.
+- **GET /api/orders/:id**: Retorna um pedido específico pelo ID.
+- **POST /api/orders**: Cria um novo pedido.
+- **PUT /api/orders/:id**: Atualiza um pedido existente.
+- **DELETE /api/orders/:id**: Remove um pedido existente.
 
 
 Certifique-se de incluir o token de acesso nos cabeçalhos das solicitações que exigem autenticação, no formato:
