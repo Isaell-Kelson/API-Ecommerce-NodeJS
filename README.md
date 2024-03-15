@@ -1,4 +1,5 @@
 E-commerce REST API
+
 Este é um projeto de uma API REST para um sistema de e-commerce. Ele fornece endpoints para gerenciar produtos, usuários e pedidos.
 
 Endpoints
