@@ -77,8 +77,3 @@ Authorization: Bearer <token>
   - **Versão:** ^2.18.1 indica que qualquer versão acima de 2.18.1 pode ser instalada, desde que não seja uma versão 3.0.0 ou superior, que pode introduzir mudanças incompatíveis.
 
 
-Autor
-Isaell
-
-Licença
-Este projeto é licenciado sob a Licença ISC.
