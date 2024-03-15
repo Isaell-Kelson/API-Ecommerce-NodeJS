@@ -4,12 +4,12 @@ Este é um projeto de uma API REST para um sistema de e-commerce. Ele fornece en
 
 ## Tecnologias Utilizadas
 
-- **Javascript
-- **Nodejs
-- **MySQL
-- **Postman
-- **HTML
-- **CSS
+- Javascript
+- Nodejs
+- MySQL
+- Postman
+- HTML
+- CSS
 
 ## Endpoints
 
