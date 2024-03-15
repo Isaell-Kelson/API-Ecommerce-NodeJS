@@ -13,18 +13,34 @@ Este é um projeto de uma API REST para um sistema de e-commerce. Ele fornece en
 
 ## Endpoints
 
-- **POST /api/auth/register**: Registra um novo usuário.
-- **POST /api/auth/login**: Autentica um usuário e retorna um token de acesso.
-- **GET /api/products**: Retorna todos os produtos disponíveis.
-- **GET /api/products/:id**: Retorna um produto específico pelo ID.
-- **POST /api/products**: Adiciona um novo produto.
-- **PUT /api/products/:id**: Atualiza um produto existente.
-- **DELETE /api/products/:id**: Remove um produto existente.
-- **GET /api/orders**: Retorna todos os pedidos.
-- **GET /api/orders/:id**: Retorna um pedido específico pelo ID.
-- **POST /api/orders**: Cria um novo pedido.
-- **PUT /api/orders/:id**: Atualiza um pedido existente.
-- **DELETE /api/orders/:id**: Remove um pedido existente.
+- **Usuários:**
+  - **GET /usuarios:** Retorna todos os usuários.
+  - **GET /usuarios/:id:** Retorna um usuário específico pelo ID.
+  - **POST /usuarios:** Cria um novo usuário.
+  - **PUT /usuarios/:id:** Atualiza um usuário existente.
+  - **DELETE /usuarios/:id:** Remove um usuário existente.
+
+- **Produtos:**
+  - **GET /produtos:** Retorna todos os produtos.
+  - **GET /produtos/:id:** Retorna um produto específico pelo ID.
+  - **POST /produtos:** Adiciona um novo produto.
+  - **PUT /produtos/:id:** Atualiza um produto existente.
+  - **DELETE /produtos/:id:** Remove um produto existente.
+
+- **Página Inicial:**
+  - **GET /inicio:** Retorna a página inicial.
+
+- **Pedidos:**
+  - **GET /pedidos:** Retorna todos os pedidos.
+  - **GET /pedidos/:id:** Retorna um pedido específico pelo ID.
+  - **POST /pedidos:** Cria um novo pedido.
+  - **PUT /pedidos/:id:** Atualiza um pedido existente.
+  - **DELETE /pedidos/:id:** Remove um pedido existente.
+
+- **Carrinho:**
+  - **GET /carrinho:** Retorna o carrinho do usuário.
+  - **POST /carrinho:** Adiciona um produto ao carrinho.
+  - **DELETE /carrinho/:id:** Remove um produto do carrinho.
 
 
 Certifique-se de incluir o token de acesso nos cabeçalhos das solicitações que exigem autenticação, no formato:
